@@ -8,7 +8,7 @@
 
 int print_int(va_list ptr)
 {
-	int i, num, temp, count, arr[10];
+	int i, num, count, arr[10];
 	char x[1];
 
 	num = va_arg(ptr, int);
@@ -25,8 +25,8 @@ int print_int(va_list ptr)
 	while (i >= 0)
 	{
 		x[0] = ('0' + arr[i]);
-		temp = write(1, x, 1);
-		count += temp;
+		write(1, x, 1);
+		count++;
 		i--;
 	}
 	return (count);
