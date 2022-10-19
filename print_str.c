@@ -11,7 +11,7 @@ int print_str(va_list ptr)
 	int count;
 	char *str;
 
-	str = va_arg(ptr, char*);
+	str = va_arg(ptr, char *);
 
 	if (str == NULL)
 		str = "(null)";

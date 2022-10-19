@@ -10,17 +10,20 @@ int (*specifier(const char *format))(va_list)
 {
 	int i;
 
-	func_y myArray[5] = {
+	func_y myArray[7] = {
 		{"c", print_char},
 		{"s", print_str},
 		{"i", print_int},
 		{"d", print_dec},
-		{NULL, NULL}};
+		{"r", print_r},
+		{"o", print_octal},
+		{NULL, NULL}
+	};
 
 	for (i = 0; myArray[i].y; i++)
 	{
 		if (*(myArray[i].y) == *format)
-			return (myArray[i].f);
+			break;
 	}
-	return (NULL);
+	return (myArray[i].f);
 }
