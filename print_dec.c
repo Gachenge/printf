@@ -16,8 +16,8 @@ int print_dec(va_list ptr)
 	count = 0;
 	large = 1000000000;
 	arr[0] = num / large;
-	
-	for (i = 1; i <10; i++)
+
+	for (i = 1; i < 10; i++)
 	{
 		large = large / 10;
 		arr[i] = (num / large) % 10;
@@ -25,7 +25,7 @@ int print_dec(va_list ptr)
 	if (num < 0)
 	{
 		write(1, "-", 1);
-		count ++;
+		count++;
 		for (i = 0; i < 10; i++)
 			arr[i] *= -1;
 	}
@@ -35,7 +35,7 @@ int print_dec(va_list ptr)
 		if (sum != 0 || i == 9)
 		{
 			x[0] = ('0' + arr[i]);
-			write (1, x, 1);
+			write(1, x, 1);
 			count++;
 		}
 	}

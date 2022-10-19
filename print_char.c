@@ -14,5 +14,5 @@ int print_char(va_list ptr)
 	{
 		write(1, &s, 1);
 	}
-	return(1);
+	return (1);
 }
