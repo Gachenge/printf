@@ -7,7 +7,7 @@
 #include <unistd.h>
 
 int _printf(const char *format, ...);
-int (*specifier(const char*))(va_list);
+int (*specifier(const char *))(va_list);
 
 /**
  * struct func - check format
