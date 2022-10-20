@@ -12,7 +12,7 @@ int print_rot(va_list rot)
 	int count = 0;
 	char *str;
 	char x[] = "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz";
-	char y[] = "NOPQRSTUVWXYZABCDEFGHIJKLMnopqrstuvwxyzABCDEFGHIJKLM";
+	char y[] = "NOPQRSTUVWXYZABCDEFGHIJKLMnopqrstuvwxyzabcdefghijklm";
 
 	str = va_arg(rot, char *);
 	if (!str)
