@@ -10,14 +10,14 @@ int print_octal(va_list oct)
 {
 	unsigned int i, num, max, arr[11];
 	int sum = 0, count = 0;
+	char x[1];
 
 	num = va_arg(oct, unsigned int);
 	max = 1073741824;
 
 	arr[0] = num / max;
 
-	i = 1;
-	while (i < 11)
+	for (i = 1; i < 11; i++)
 	{
 		max /= 8;
 		arr[i] = (num / max) % 8;
@@ -28,7 +28,8 @@ int print_octal(va_list oct)
 		sum += arr[i];
 		if (sum || i == 10)
 		{
-			write(1, &arr[i], 1);
+			x[0] = ('0' + arr[i]); 
+			write(1, x, 1);
 			count++;
 		}
 	}

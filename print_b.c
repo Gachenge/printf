@@ -28,8 +28,8 @@ int print_b(va_list b)
 		sum += arr[i];
 		if (sum || i == 31)
 		{
-			x[1] = ('0' + arr[i]);
-			write(1, &x, 1);
+			x[0] = ('0' + arr[i]);
+			write(1, x, 1);
 			count++;
 		}
 	}
