@@ -9,7 +9,8 @@
 int print_b(va_list b)
 {
 	unsigned int num, max, sum = 0, arr[32], i;
-	int count;
+	int count = 0;
+	char x[1];
 
 	num = va_arg(b, unsigned int);
 
@@ -27,7 +28,8 @@ int print_b(va_list b)
 		sum += arr[i];
 		if (sum || i == 31)
 		{
-			write(1, &arr[i], 1);
+			x[1] = ('0' + arr[i]);
+			write(1, x, 1);
 			count++;
 		}
 	}
