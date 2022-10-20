@@ -1,7 +1,7 @@
 #include "main.h"
 
 /**
- * print_int - print integers
+ * print_dec - print integers
  * @ptr: variadic
  * Return: 0
  */

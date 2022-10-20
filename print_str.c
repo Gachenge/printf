@@ -2,7 +2,7 @@
 
 /**
  * print_str - print string
- * @args: variadic
+ * @ptr: variadic
  * Return: count
  */
 

@@ -2,7 +2,7 @@
 
 /**
  * print_char - prints character
- * @ptr: variadic
+ * @ch: variadic
  * Return: 0
  */
 

@@ -2,7 +2,7 @@
 
 /**
  * print_octal - print octal
- * @ptr: variadic
+ * @oct: variadic
  * Return: 0
  */
 
