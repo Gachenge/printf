@@ -6,13 +6,11 @@
  * Return: 0
  */
 
-int print_char(va_list ptr)
+int print_char(va_list ch)
 {
-	char s = (char)va_arg(ptr, int);
+	char s = (char)va_arg(ch, int);
 
-	if (s)
-	{
 		write(1, &s, 1);
-	}
+	
 	return (1);
 }
