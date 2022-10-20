@@ -3,23 +3,23 @@
 /**
  * print_hex - hex convert
  * @n: the number
- * @x: flag
+ * @c: flag
  * Return: 0
  */
 
-int print_hex(unsigned int n, unsigned int x)
+int print_hex(unsigned int n, unsigned int c)
 {
 	unsigned int arr[8], i, max, sum = 0;
 	char flag;
 	int count = 0;
-	char c[1];
+	char x[1];
 
 	max = 268435456;
 
-	if (x)
-		flag = 'A' - ':';
+	if (c)
+		flag = 7;
 	else
-		flag = 'a' - ':';
+		flag = 39;
 	arr[0] = n / max;
 
 	for (i = 1; i < 8; i++)
