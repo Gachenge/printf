@@ -29,7 +29,7 @@ int print_b(va_list b)
 		if (sum || i == 31)
 		{
 			x[1] = ('0' + arr[i]);
-			write(1, x, 1);
+			write(1, &x, 1);
 			count++;
 		}
 	}
