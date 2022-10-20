@@ -10,7 +10,7 @@ int (*specifier(const char *format))(va_list)
 {
 	int i;
 
-	func_y myArray[8] = {
+	func_y myArray[9] = {
 		{"c", print_char},
 		{"s", print_str},
 		{"i", print_int},
@@ -18,6 +18,7 @@ int (*specifier(const char *format))(va_list)
 		{"r", print_r},
 		{"o", print_octal},
 		{"%", print_pc},
+		{"b", print_b},
 		{NULL, NULL}
 	};
 

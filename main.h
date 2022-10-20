@@ -28,5 +28,6 @@ int print_dec(va_list);
 int print_octal(va_list);
 int print_r(va_list);
 int print_pc(va_list);
+int print_b(va_list);
 
 #endif /* MAIN_H */
