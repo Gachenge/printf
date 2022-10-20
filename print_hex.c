@@ -34,13 +34,13 @@ int print_hex(unsigned int n, unsigned int c)
 		{
 			if (arr[i] < 10)
 			{
-				c[0] = ('0' + arr[i]);
-				write(1, c, 1);
+				x[0] = ('0' + arr[i]);
+				write(1, x, 1);
 			}
 			else
 			{
-				c[0] = ('0' + flag + arr[i]);
-				write(1, c, 1);
+				x[0] = ('0' + flag + arr[i]);
+				write(1, x, 1);
 			}
 			count++;
 		}
