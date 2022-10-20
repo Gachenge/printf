@@ -6,12 +6,12 @@
  * Return: 0
  */
 
-int print_octal(va_list ptr)
+int print_octal(va_list oct)
 {
 	unsigned int i, num, max, arr[11];
 	int sum = 0, count = 0;
 
-	num = va_arg(ptr, unsigned int);
+	num = va_arg(oct, unsigned int);
 	max = 1073741824;
 
 	arr[0] = num / max;
