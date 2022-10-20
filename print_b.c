@@ -8,21 +8,28 @@
 
 int print_b(va_list b)
 {
-	int arr[10], num, i, count = 0;
+	unsigned int num, max, sum = 0, arr[32], i;
+	int count;
 
-	num = va_arg(b, int);
+	num = va_arg(b, unsigned int);
 
-	if (!num)
-		return (0);
-	for (i = 0; num > 0; i++)
+	max = 2147483648;
+
+	arr[0] = num / max;
+
+	for (i = 1; i < 32; i++)
 	{
-		arr[i] = num % 2;
-		num /= 2;
+		max /= 2;
+		arr[i] = (num / max) % 2;
 	}
-	for (i = i - 1; i >= 0; i--)
+	for (i = 0; i < 32; i++)
 	{
-		write(1, &arr[i], 1);
-		count++;
+		sum += arr[i];
+		if (sum || i == 31)
+		{
+			write(1, &arr[i], 1);
+			count++;
+		}
 	}
 	return (count);
 }
