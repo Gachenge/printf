@@ -9,7 +9,7 @@
 int print_octal(va_list oct)
 {
 	unsigned int i, num, max, arr[11];
-	int sum = 0, count = 0;
+	int count = 0;
 	char x[1];
 
 	num = va_arg(oct, unsigned int);
@@ -24,13 +24,9 @@ int print_octal(va_list oct)
 	}
 	for (i = 0; i < 11; i++)
 	{
-		sum += arr[i];
-		if (sum)
-		{
 			x[0] = ('0' + arr[i]);
 			write(1, x, 2);
 			count++;
-		}
 	}
 	return (count);
 }
