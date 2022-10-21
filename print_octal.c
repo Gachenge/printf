@@ -22,10 +22,10 @@ int print_octal(va_list oct)
 		max /= 8;
 		arr[i] = (num / max) % 8;
 	}
-	for (i = 0; i < 10; i++)
+	for (i = 0; i < 11; i++)
 	{
 		sum += arr[i];
-		if (sum || i == 10)
+		if (sum)
 		{
 			x[0] = ('0' + arr[i]);
 			write(1, x, 2);
