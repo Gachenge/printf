@@ -10,6 +10,7 @@ static int print_hX(char c)
 {
 	int i;
 	char x[2];
+	char v[1];
 
 	x[0] = c / 16;
 	x[1] = c % 16;
@@ -17,9 +18,15 @@ static int print_hX(char c)
 	for (i = 0; i < 2; i++)
 	{
 		if (x[i] > 9)
-			_putchar('0' + 7 + x[i]);
+		{
+			v[0] = ('0' + 7 + x[i]);
+			write(1, v, 1);
+		}
 		else
-			_putchar('0' + x[i]);
+		{
+			v[0] = ('0' + x[i]);
+			write(1, v, 1);
+		}
 	}
 	return (i);
 }
@@ -42,14 +49,14 @@ int print_S(va_list S)
 	{
 		if (x[i] < 32 || x[i] >= 127)
 		{
-			_putchar('\\');
-			_putchar('x');
+			write(1, "\\", 1);
+			write(1, "x", 1);
 			count += 2;
 			count += print_hX(x[i]);
 		}
 		else
 		{
-			_putchar(x[i]);
+			write(1, &x[i], 1);
 			count++;
 		}
 	}
