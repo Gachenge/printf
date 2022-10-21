@@ -1,22 +1,20 @@
 #include "main.h"
 
 /**
- * print_octal - print octal
- * @oct: variadic
+ * print_octal - print octal num
+ * @oct: octal
  * Return: 0
  */
 
-int print_octal(va_list ptr)
+int print_octal(va_list oct)
 {
-	unsigned int i, num, max, arr[11];
-	int count = 0, sum = 0;
+	unsigned int i, num, arr[11], count = 0;
+	unsigned int max = 1073741824;
 	char x[1];
 
-	num = va_arg(ptr, unsigned int);
-	max = 1073741824;
+	num = va_arg(oct, unsigned int);
 
 	arr[0] = num / max;
-
 	for (i = 1; i < 11; i++)
 	{
 		max /= 8;
@@ -24,13 +22,9 @@ int print_octal(va_list ptr)
 	}
 	for (i = 0; i < 11; i++)
 	{
-		sum += arr[i];
-		if (sum)
-		{
-			x[0] = ('0' + arr[i]);
-			write(1, x, 2);
-			count++;
-		}
+		x[0] = ('0' + arr[i]);
+		write(1, x, 1);
+		count++;
 	}
 	return (count);
 }
