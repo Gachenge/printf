@@ -6,7 +6,7 @@
  * Return: 0
  */
 
-int print_hX(char c)
+static int print_hX(char c)
 {
 	int i;
 	char x[2];
