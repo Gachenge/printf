@@ -12,7 +12,7 @@ static int print_hX(char c)
 	char x[2];
 
 	x[0] = c / 16;
-	x[1] = c %16;
+	x[1] = c % 16;
 
 	for (i = 0; i < 2; i++)
 	{
@@ -26,7 +26,7 @@ static int print_hX(char c)
 
 /**
  * print_S - print non printable characters
- * @str: variadic string
+ * @S: variadic string
  * Return: 0
  */
 
@@ -38,7 +38,7 @@ int print_S(va_list S)
 	x = va_arg(S, char *);
 	if (!x)
 		x = "(null)";
-	for(i = 0; x[i]; i++)
+	for (i = 0; x[i]; i++)
 	{
 		if (x[i] < 32 || x[i] >= 127)
 		{
