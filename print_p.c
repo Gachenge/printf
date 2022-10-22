@@ -12,14 +12,15 @@ int print_p(va_list P)
 	char c[1];
 	unsigned long max = 1.15292150461e+18, num;
 	int count = 0;
+	char s[5] = "(nil)";
 
 	num = va_arg(P, unsigned long);
 
 	if (num == 0)
 	{
-		for (i = 0; arr[i]; i++)
+		for (i = 0; s[i]; i++)
 		{
-			write(1, "(nil)", 5);
+			write(1, &s[i], 1);
 			count++;
 		}
 		return (count);
