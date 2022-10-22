@@ -35,5 +35,6 @@ int large(va_list);
 int small(va_list);
 int _putchar(char c);
 int print_S(va_list);
+int print_p(va_list);
 
 #endif /* MAIN_H */
